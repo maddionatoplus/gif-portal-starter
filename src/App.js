@@ -164,7 +164,7 @@ const App = () => {
       return (
         <div className="connected-container">
           <button className="cta-button submit-gif-button" onClick={createGifAccount}>
-            Do One-Time Initialization For GIF Program Account
+            Do One-Time Initialization For Toplus Fractal
           </button>
         </div>
       )
@@ -194,10 +194,10 @@ const App = () => {
             {gifList.map((item, index) => (
               <div className="gif-item" key={index}>
                 <img src={item.gifLink.split(".gif")[0] + ".gif"} alt={item.userAddress} />
-                <p>Thanks to: {item.userAddress.toString()}</p>
-                <p>Votes: {item.votes.toString()}</p>
+                <p className="footer-text">Thanks to: {item.userAddress.toString()}</p>
+                <p className="footer-text">Votes: {item.votes.toString()}</p>
                 <button onClick={() => upVoteGif(index)} className="cta-button submit-gif-button">
-                  I LOVE THIS GIF
+                  I LOVE THIS FRACTAL
                 </button>
               </div>
             ))}
@@ -243,9 +243,6 @@ const App = () => {
   const getGifList = async () => {
     try {
       const provider = getProvider();
-      console.log(idl)
-      console.log(programID)
-      console.log(provider)
       const program = new Program(idl, programID, provider);
       const account = await program.account.baseAccount.fetch(baseAccount.publicKey);
 
@@ -269,7 +266,7 @@ const App = () => {
     <div className="App">
       <div className={walletAddress ? 'authed-container' : 'container'}> 
         <div className="header-container">
-          <p className="header">Toplus GIF Portal</p>
+          <p className="header">Toplus Fractal GIF Portal</p>
           <a
             className="footer-text"
             href={TOPLUS_LINK}
@@ -277,7 +274,7 @@ const App = () => {
             rel="noreferrer"
           > <img alt="Toplus logo" className="toplus-logo" src={toplusLogo} /> </a>
           <p className="sub-text">
-            View your GIF collection in the metaverse ✨
+            View my Fractal GIF collection in the metaverse ✨
           </p>
           {!walletAddress && renderNotConnectedContainer()}
 

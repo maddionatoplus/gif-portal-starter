@@ -1,6 +1,6 @@
 .App {
   height: 100vh;
-  background-color: rgb(7, 82, 112);
+  background-color: rgb(7, 42, 56);
   overflow: scroll;
   text-align: center;
 }
@@ -32,6 +32,12 @@
   color: white;
 }
 
+.normal-text {
+  font-size: 20px;
+  color: rgb(131, 131, 131);
+  text-align: left;
+}
+
 .gradient-text {
   background: -webkit-linear-gradient(left, #60c657 30%, #35aee2 60%);
   background-clip: text;
@@ -53,13 +59,13 @@
 }
 
 .connect-wallet-button {
-  background: -webkit-linear-gradient(left, #60c657, #35aee2);
+  background: -webkit-linear-gradient(left, #57c692, #1a83b1);
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
 }
 
 .submit-gif-button {
-  background: -webkit-linear-gradient(left, #4e44ce, #35aee2);
+  background: -webkit-linear-gradient(left, #2e25ac, #8d1b6b);
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
   margin-left: 10px;
@@ -136,3 +142,4 @@
 .connected-container button {
   height: 50px;
 }
+
